@@ -76,12 +76,6 @@ int Node::mcts(Connect &rootenv, int itermax){
     return rootnode.visitsselect()._move;
 }
 
-void Node::removeuntriedmove(int move){
-    for(auto it=_untriedmoves.begin(); it!=_untriedmoves.end(); ++it){
-        if(*it==move){ _untriedmoves.erase(it); }
-    }
-}
-
 void Node::removemove(int col){
     bool _end(false);
     int pos(0);
